@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Evans-Munatsa/Health-watch/issues"
   },
-  "homepage": "https://github.com/Evans-Munatsa/Health-watch#readme"
+  "homepage": "https://github.com/Evans-Munatsa/Health-watch#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
