@@ -5,6 +5,7 @@ var express = require('express'),
     myConnection = require('express-myconnection'),
     home = require('./routes/home'),
     questions = require('./routes/questions'),
+    ask_questions = require('./routes/ask_questions'),
     answers = require('./routes/answers');
 
 
@@ -32,7 +33,9 @@ app.use(myConnection(mysql, db, 'single'));
 
 //setup handlers
 app.get('/', home.home);
+app.get('/help', home.help);
 app.get('/questions', questions.questions);
+app.get('/ask_questions', ask_questions.ask_questions);
 app.get('/answers', answers.answers);
 
 app.listen(3000, function () {
