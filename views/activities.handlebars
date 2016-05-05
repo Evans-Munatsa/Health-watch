@@ -1,64 +1,109 @@
 <div class="container">
-  <div id="newEventHolder">
-    <span><i class="fa fa-plus"></i> Add New Event</span>
-  </div>
-  <div id="newEventForm">
-    <label for="event-date">Event Date</label>
-    <input type="text" id="eventDate">
-    <label for="event-title">Event Title</label>
-    <input type="text" name="event-title" id="eventTitleInput" maxlength="80"/>
-    <label for="event-description">Description</label>
-    <textarea name="event-descripton" id="eventDescriptionInput">Event Description</textarea>
-    <button name="add-event" id="addEvent">Add New Event</button>
-    <button name="cancel-add-event" id="cancelAddEvent">Cancel</button>
-  </div>
-  <ul id="upcomingEvents">
-    <li id="eventHolder">
-      <div class="event-date-holder">
-        <span id="dateNumber">23</span>
-        <span id="dateDay">Jan</span>
+  <div class="panel panel-default" style="padding:10px; margin:0 auto;width:75%;">
+    <div class="panel-heading">
+      
+      <h2 class="panel-title">Event Form</h2>
+      
+    </div>
+    
+    <div class="panel-body">
+      
+      <form name="contactform" method="post" class="form-horizontal" role="form">
+        
+        <div class="form-group">
+          
+          <label for="name">Your Name</label>
+          
+          <div class="input-group">
+            
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+          </span>
+          <input type="text" class="form-control" id="inputName" name="inputName" placeholder="First and Last Name">
+          
+        </div>
       </div>
-      <div class="event-details-holder">
-        <h1>Mitchels Plain Community Centre </h1>
-        <span id="eventDescription">Meditation and its usefulness&hellip;</span>
-        <ul id="editTools">
-          <li><i class="fa fa-pencil-square-o"></i></li>
-          <li><i class="fa fa-bars"></i></li>
-          <li><i class="fa fa-times" id="removeEvent"></i></li>
-        </ul>
+      <div class="form-group">
+        
+        <label for="email"> Email Address</label>
+        
+        <div class="input-group">
+          
+          
+          <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+        </span>
+        
+        <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
+        
       </div>
-    </li>
-    <li id="eventHolder">
-      <div class="event-date-holder">
-        <span id="dateNumber">23</span>
-        <span id="dateDay">Jan</span>
-      </div>
-      <div class="event-details-holder">
-        <h1>Khayelitsha Hall</h1>
-        <span id="eventDescription">Free Yoga class and mental stimulation &hellip;</span>
-        <ul id="editTools">
-          <li><i class="fa fa-pencil-square-o"></i></li>
-          <li><i class="fa fa-bars"></i></li>
-          <li><i class="fa fa-times" id="removeEvent"></i></li>
-        </ul>
-      </div>
-    </li>
-    <li id="eventHolder">
-      <div class="event-date-holder">
-        <span id="dateNumber">23</span>
-        <span id="dateDay">Jan</span>
-      </div>
-      <div class="event-details-holder">
-        <h1>Table Mountain</h1>
-        <span id="eventDescription">A look at nature ,lets explore&hellip;</span>
-        <ul id="editTools">
-          <li><i class="fa fa-pencil-square-o"></i></li>
-          <li><i class="fa fa-bars"></i></li>
-          <li><i class="fa fa-times" id="removeEvent"></i></li>
-        </ul>
-      </div>
-      <li>
-      </ul>
+    </div>
+    
+    <div class="form-group">
+      <label for="subject">Organization/Company</label>
+      <div class="input-group">
+        
+        <span class="input-group-addon"><span class="glyphicon glyphicon-briefcase"></span>
+      </span>
+      
+      <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Organization/Company Name">
+      
     </div>
   </div>
+  
+  <div class="form-group">
+    <label for="subject">Type of Event</label>
+    <div class="input-group">
+      
+      <span class="input-group-addon"><span class="glyphicon glyphicon-glass"></span>
+    </span>
+    
+    <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Type of Event">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="subject">Date/Time</label>
+  <div class="input-group">
+    
+    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+  </span>
+  
+  <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Date/Time">
+  
+</div>
+</div>
+
+<div class="form-group">
+<label for="subject">Phone Number</label>
+<div class="input-group">
+  
+  <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span>
+</span>
+<input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Phone Number">
+
+</div>
+</div>
+
+<div class="form-group">
+
+<label for="message">Additional Information</label>
+
+<div class="input-group">
+
+<span class="input-group-addon"><span class="glyphicon glyphicon-comment"></span>
+</span>
+
+<textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Additional Info..."></textarea>
+</div>
+</div>
+
+
+<button type="button" class="btn btn-primary">SUBMIT!</button>
+</div>
+</div>
+
+</form>
+</div>
+</div>
+</div>
 </div>
