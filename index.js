@@ -1,6 +1,8 @@
 //module dependencies
 var express = require('express'),
     exphbs = require('express-handlebars'),
+    mysql = require('mysql'),
+    myConnection = require('express-myconnection'),
     home = require('./routes/home'),
     questions = require('./routes/questions'),
     answers = require('./routes/answers');
@@ -9,6 +11,13 @@ var express = require('express'),
 
 var app = express();
 
+var db =  {
+  host:'localhost',
+  user:'root',
+  password:'brix2015',
+  port:'3306',
+  database:'',
+};
 
 //setup template handlebars as the template engine
 app.engine('handlebars', exphbs({
@@ -18,6 +27,8 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 app.use(express.static(__dirname + '/public'));
+
+app.use(myConnection(mysql, db, 'single'));
 
 //setup handlers
 app.get('/', home.home);
