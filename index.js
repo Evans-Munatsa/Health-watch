@@ -3,6 +3,7 @@ var express = require('express'),
     exphbs = require('express-handlebars'),
     mysql = require('mysql'),
     myConnection = require('express-myconnection'),
+    bodyParser = require('body-parser'),
     home = require('./routes/home'),
     questions = require('./routes/questions'),
     ask_questions = require('./routes/ask_questions'),
@@ -17,7 +18,7 @@ var db =  {
   user:'root',
   password:'brix2015',
   port:'3306',
-  database:'',
+  database:'impilo'
 };
 
 //setup template handlebars as the template engine
@@ -29,6 +30,12 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(__dirname + '/public'));
 
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+
 app.use(myConnection(mysql, db, 'single'));
 
 //setup handlers
@@ -36,6 +43,7 @@ app.get('/', home.home);
 app.get('/help', home.help);
 app.get('/questions', questions.questions);
 app.get('/ask_questions', ask_questions.ask_questions);
+app.post('/ask_questions/add', ask_questions.add_questions)
 app.get('/answers', answers.answers);
 
 app.listen(3000, function () {
