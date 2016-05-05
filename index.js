@@ -22,6 +22,7 @@ app.use(express.static(__dirname + '/public'));
 
 //setup handlers
 app.get('/', home.home);
+app.get('/help', home.help);
 app.get('/questions', questions.questions);
 app.get('/ask_questions', ask_questions.ask_questions);
 app.get('/answers', answers.answers);
