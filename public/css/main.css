@@ -1,0 +1,65 @@
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css");
+
+body#event-form {
+        background-image: url('https://cloud.githubusercontent.com/assets/5033756/3879709/97c3528e-217b-11e4-9916-860b28a1949d.JPG');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Oswald', sans-serif;
+
+font-family: 'Oswald', sans-serif;
+
+h2 {
+  font-weight:bolder;
+  font-size:32px''
+}
+  
+ nav {
+        width: 150px;
+        float: left;
+        display: inline;
+        margin: 0;
+        padding:300;
+        margin-right: 10px;
+        opacity:0.9;
+        margin-top: 100px;
+        margin-left: 50px;
+}
+
+ul.nav > li > a, ul.nav > li > a:hover {
+        color: White;
+        font-size: x-large;
+        font-family: Oswald ;
+        font-style: Bold;
+        background-color: transparent;
+}
+  
+  footer {
+        font-family: Oswald;
+        font-style: Bold;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 95px;
+        background-color: Black;
+        opacity:0.9;
+        padding-top: 4px;
+        margin-top: 100px;
+}
+
+footer > p, footer > a {
+        color: White;
+        font-size: 30px;
+        text-align:center;
+}
+
+  btn {
+     hover: #3cb0fd;
+  text-decoration: none;
+  }
+  
+  h2 {
+    font-size:32px;
+    font-weight:bolder;
+  }

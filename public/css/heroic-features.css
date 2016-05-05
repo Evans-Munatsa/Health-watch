@@ -25,5 +25,9 @@ footer {
 }
 
 .jumbotron .button_links{
-  float: right;
+  text-align: center;
+}
+
+.navbar-fixed-top {
+  position: absolute;
 }

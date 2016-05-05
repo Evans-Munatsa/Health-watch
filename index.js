@@ -7,6 +7,9 @@ var express = require('express'),
     home = require('./routes/home'),
     questions = require('./routes/questions'),
     ask_questions = require('./routes/ask_questions'),
+    help = require('./routes/help'),
+    activities = require('./routes/activities'),
+    about_us = require('./routes/about_us'),
     answers = require('./routes/answers');
 
 
@@ -40,11 +43,14 @@ app.use(myConnection(mysql, db, 'single'));
 
 //setup handlers
 app.get('/', home.home);
-app.get('/help', home.help);
+app.get('/help', help.help);
 app.get('/questions', questions.questions);
 app.get('/ask_questions', ask_questions.ask_questions);
 app.post('/ask_questions/add', ask_questions.add_questions)
 app.get('/answers', answers.answers);
+app.get('/activities', activities.activities);
+app.get('/about_us', about_us.about_us);
+
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
