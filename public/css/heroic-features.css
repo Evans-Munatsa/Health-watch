@@ -31,3 +31,26 @@ footer {
 .navbar-fixed-top {
   position: absolute;
 }
+
+.navbar-nav>li {
+    float: left;
+    color: coral;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 15px;
+    -moz-osx-font-smoothing: 
+    }
